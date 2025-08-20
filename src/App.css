@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1B2C4A; /* Cor de fundo */
+  color: #E2D5CE; /* Cor do texto principal */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.App {
+  background-color: #1B2C4A;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: #00ff97; /* Cor do título */
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #47cc96; /* Cor da borda */
+  background-color: #1B2C4A;
+  color: #E2D5CE;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #00ff97; /* Cor da borda ao focar */
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #47cc96;
+  color: #1B2C4A;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #35a076; /* Tom mais escuro no hover */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(71, 204, 150, 0.1); /* Fundo suave para os itens */
+  border-left: 5px solid #00ff97;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: rgba(71, 204, 150, 0.2);
+}
+
+li span {
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: left;
+}
+
+li button {
+  background-color: transparent;
+  border: none;
+  color: #E2D5CE;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+li button:hover {
+  opacity: 1;
+  color: #dc3545; /* Cor vermelha para indicar remoção */
+}
+
+/* Estilização para o formulário de edição */
+.edit-form {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.edit-form input {
+  flex-grow: 1;
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 16px;
+  border: 2px solid #47cc96;
+  background-color: #1B2C4A;
+  color: #E2D5CE;
+  border-radius: 5px;
+  outline: none;
+}
+
+.edit-form button {
+  padding: 8px 12px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form button:first-of-type { /* Botão Salvar */
+  background-color: #47cc96;
+  color: #1B2C4A;
+  margin-right: 5px;
+}
+
+.edit-form button:last-of-type { /* Botão Cancelar */
+  background-color: #E2D5CE;
+  color: #1B2C4A;
+}
+
+.edit-form button:first-of-type:hover {
+  background-color: #35a076;
+}
+
+.edit-form button:last-of-type:hover {
+  background-color: #d2c5bf;
+}
+
+/* Estilização para os botões de controle (Editar/Remover) */
+.task-controls button {
+  background-color: transparent;
+  border: none;
+  color: #E2D5CE;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.task-controls button:hover {
+  opacity: 1;
+}
+
+/* Cor específica para o botão Remover */
+.task-controls button:last-of-type {
+  color: #E2D5CE;
+}
+
+.task-controls button:last-of-type:hover {
+  color: #dc3545;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 8px 12px;
+  border: 1px solid #E2D5CE;
+  background-color: transparent;
+  color: #E2D5CE;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #E2D5CE;
+  color: #1B2C4A;
+}
+
+.filter-buttons button.active {
+  background-color: #00ff97;
+  color: #1B2C4A;
+  border-color: #00ff97;
+}
+
+.task-count {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00ff97; /* Cor de destaque para o contador */
+}
+
+.task-count p {
+  margin: 0;
+}
